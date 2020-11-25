@@ -10,6 +10,12 @@ use App\Services\UserServiceInterface;
 
 class UserHttpHandler extends UserHttpHandlerAbstract
 {
+    public function myProfile(UserServiceInterface $userService, array $formData = [])
+    {
+        $currentUser = $userService->currentUser();
+        $this->render("users/myProfile", $currentUser);
+    }
+
     public function register(UserServiceInterface $userService, array $formData = [])
     {
         if (isset($formData['register'])) {
