@@ -17,7 +17,7 @@
             <tr>
                 <td><?= $user->getId(); ?></td>
                 <td><?= $user->getUsername(); ?></td>
-                <td><?= $user->getFirstName() . ' ' . $user->getLastName() ?></td>
+                <td><?= $user->getFullName(); ?></td>
                 <td><?= $user->getBornOn(); ?></td>
             </tr>
 

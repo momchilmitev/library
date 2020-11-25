@@ -19,13 +19,12 @@ class UserRepository implements UserRepositoryInterface
     public function insert(UserDTO $userDTO): bool
     {
         $this->db->query(
-            "INSERT INTO users(username, password, first_name, last_name, born_on)
-                    VALUES (?, ?, ?, ?, ?)
+            "INSERT INTO users(username, password, full_name, born_on)
+                    VALUES (?, ?, ?, ?)
         ")->execute([
             $userDTO->getUsername(),
             $userDTO->getPassword(),
-            $userDTO->getFirstName(),
-            $userDTO->getLastName(),
+            $userDTO->getFullName(),
             $userDTO->getBornOn(),
         ]);
 
@@ -38,8 +37,7 @@ class UserRepository implements UserRepositoryInterface
             SELECT id,
                    username,
                    password,
-                   first_name AS firstName,
-                   last_name AS lastName,
+                   full_name AS fullName,
                    born_on AS bornOn
             FROM users
             WHERE username = ?
@@ -55,8 +53,7 @@ class UserRepository implements UserRepositoryInterface
             SELECT id,
                    username,
                    password,
-                   first_name AS firstName,
-                   last_name AS lastName,
+                   full_name AS fullName,
                    born_on AS bornOn
             FROM users
             WHERE id = ?
@@ -72,8 +69,7 @@ class UserRepository implements UserRepositoryInterface
             SELECT id,
                    username,
                    password,
-                   first_name AS firstName,
-                   last_name AS lastName,
+                   full_name AS fullName,
                    born_on AS bornOn
             FROM users
         ")
@@ -88,16 +84,14 @@ class UserRepository implements UserRepositoryInterface
             SET
                 username = ?,
                 password = ?,
-                first_name = ?,
-                last_name = ?,
+                full_name = ?,
                 born_on = ?
             WHERE id = ? 
         "
         )->execute([
             $userDTO->getUsername(),
             $userDTO->getPassword(),
-            $userDTO->getFirstName(),
-            $userDTO->getLastName(),
+            $userDTO->getFullName(),
             $userDTO->getBornOn(),
             $id
         ]);

@@ -1,3 +1,5 @@
+<?php /** @var array $errors */ ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,15 +26,11 @@
         </label>
         <br>
         <label>
-            First Name: <input type="text" name="first_name"/>
+            Full Name: <input type="text" name="full_name"/>
         </label>
         <br>
         <label>
-            Last Name: <input type="text" name="last_name"/>
-        </label>
-        <br>
-        <label>
-            Born On: <input type="date" name="born_on"/>
+            Born On: <input type="text" name="born_on"/>
         </label>
         <br>
         <input type="submit" name="register" value="Register"/>

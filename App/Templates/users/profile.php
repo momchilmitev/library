@@ -26,11 +26,7 @@
     </label>
     <br>
     <label>
-        First Name: <input type="text" name="first_name" value="<?= $data->getFirstName(); ?>"/>
-    </label>
-    <br>
-    <label>
-        Last Name: <input type="text" name="last_name" value="<?= $data->getLastName(); ?>"/>
+        Full Name: <input type="text" name="first_name" value="<?= $data->getFullName(); ?>"/>
     </label>
     <br>
     <label>

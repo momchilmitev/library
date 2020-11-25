@@ -1,3 +1,6 @@
+<?php /** @var array $errors */ ?>
+<?php /** @var \App\Data\UserDTO $data */ ?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,6 +12,11 @@
 </head>
 <body>
 <h1>Login page</h1>
+
+<?php //foreach ($errors as $error): ?>
+<!--    <span style="color: red">--><?//= $error ?><!--</span>-->
+<!--    <br>-->
+<?php //endforeach; ?>
 
 <form method="post">
     <label>

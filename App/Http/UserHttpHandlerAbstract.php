@@ -18,9 +18,9 @@ class UserHttpHandlerAbstract
         $this->dataBinder = $dataBinder;
     }
 
-    public function render(string $templateName, $data = null): void
+    public function render(string $templateName, $data = null, $errors = []): void
     {
-        $this->template->render($templateName, $data);
+        $this->template->render($templateName, $data, $errors);
     }
 
     public function redirect(string $url): void
