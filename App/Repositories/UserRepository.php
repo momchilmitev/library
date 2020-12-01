@@ -7,14 +7,14 @@ namespace App\Repositories;
 use App\Data\UserDTO;
 use Database\DatabaseInterface;
 
-class UserRepository implements UserRepositoryInterface
+class UserRepository extends DatabaseAbstract implements UserRepositoryInterface
 {
-    private DatabaseInterface $db;
-
-    public function __construct(DatabaseInterface $database)
-    {
-        $this->db = $database;
-    }
+//    private DatabaseInterface $db;
+//
+//    public function __construct(DatabaseInterface $database)
+//    {
+//        $this->db = $database;
+//    }
 
     public function insert(UserDTO $userDTO): bool
     {

@@ -9,9 +9,9 @@ use Database\DatabaseInterface;
 
 class DatabaseAbstract
 {
-    private DatabaseInterface $db;
+    protected DatabaseInterface $db;
 
-    private DataBinderInterface $dataBinder;
+    protected DataBinderInterface $dataBinder;
 
     /**
      * DatabaseAbstract constructor.

@@ -15,7 +15,7 @@ $dbData= parse_ini_file("Config/db.ini");
 $pdo = new PDO($dbData['dsn'], $dbData['user'], $dbData['pass']);
 
 $db = new \Database\PDODatabase($pdo);
-$userRepository = new \App\Repositories\UserRepository($db);
+$userRepository = new \App\Repositories\UserRepository($db, $dataBinder);
 $encryptionService = new \App\Services\Encryption\ArgonService();
 $userService = new \App\Services\UserService($userRepository, $encryptionService);
 $userHttpHandler = new \App\Http\UserHttpHandler($template, $dataBinder);
