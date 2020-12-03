@@ -2,7 +2,7 @@
 
 <h1>Hello, <?= $data->getFullName(); ?></h1>
 <br>
-<a href="addBook.php">Add new book</a> | <a href="myProfile.php">My profile</a> | <a href="/logout.php">logout</a>
+<a href="add_book.php">Add new book</a> | <a href="myProfile.php">My profile</a> | <a href="/logout.php">logout</a>
 <br>
 <br>
 <br>
