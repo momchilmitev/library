@@ -50,9 +50,9 @@ class BookService implements BookServiceInterface
         return $this->bookRepository->findOneById($id);
     }
 
-    public function getOneByAuthor(): BookDTO
+    public function getAllByAuthor(): \Generator
     {
         $currentUser = $this->userService->currentUser();
-        return $this->bookRepository->findAllByAuthorId($currentUser->getId())->current();
+        return $this->bookRepository->findAllByAuthorId($currentUser->getId());
     }
 }

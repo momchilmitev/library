@@ -6,6 +6,6 @@
 <br>
 <br>
 <br>
-<a href="myBooks.php">My books</a>
+<a href="my_books.php">My books</a>
 <br>
-<a href="allBooks.php">All books</a>
+<a href="all_books.php">All books</a>

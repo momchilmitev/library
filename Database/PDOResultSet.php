@@ -26,4 +26,11 @@ class PDOResultSet implements ResultSetInterface
             yield $row;
         }
     }
+
+    public function fetchAssoc(): \Generator
+    {
+        while($row = $this->pdoStatement->fetch(\PDO::FETCH_ASSOC)) {
+            yield $row;
+        }
+    }
 }

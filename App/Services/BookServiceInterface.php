@@ -20,5 +20,8 @@ interface BookServiceInterface
 
     public function getOneById(int $id): BookDTO;
 
-    public function getOneByAuthor(): BookDTO;
+    /**
+     * @return \Generator|BookDTO[]
+     */
+    public function getAllByAuthor(): \Generator;
 }

@@ -72,4 +72,14 @@ class BookHttpHandler extends UserHttpHandlerAbstract
         }
     }
 
+    public function allBooksByAuthor()
+    {
+        if(!$this->userService->isLogged()) {
+            $this->redirect("login.php");
+        }
+
+        $books = $this->bookService->getAllByAuthor();
+        $this->render('books/my_books', $books);
+    }
+
 }
